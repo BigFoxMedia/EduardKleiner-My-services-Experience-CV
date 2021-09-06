@@ -81,6 +81,12 @@ body.dark h5,
 body.dark h6 {
   color: #fff;
 }
+
+body.dark .linker {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 body.dark .tokyo_tm_all_wrap .leftpart {
   background-color: #000;
 }
@@ -121,7 +127,8 @@ body.dark .tokyo_tm_all_wrap .leftpart img {
   filter: invert(1);
 }
 body.dark .tokyo_tm_home .avatar .image {
-  background-image: url(../../1.jpg) !important;
+  background-image: url(../../profile.jfif) !important;
+  filter: saturate(0.75) sepia(0.11) grayscale(0.31);
 }
 body.dark .cursor-inner {
   margin-left: -3px;

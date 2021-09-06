@@ -512,8 +512,8 @@ h6 {
   transform: translateY(-5px);
 }
 .social li .svg {
-  width: 17px;
-  height: 17px;
+  width: 27px;
+  height: 27px;
 }
 
 /*---------------------------------------------------*/
@@ -1056,6 +1056,27 @@ ul.react-tabs__tab-list {
   background-position: center;
   transition: all 0.3s ease-in-out;
 }
+
+.tokyo_tm_news ul li .image .main.alt {
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  position: relative;
+  right: unset;
+  padding: 40px 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  min-height: 250px;
+  align-items: center;
+}
+
+.tokyo_tm_news ul li .image .main.alt h2 {
+  font-weight: 700;
+}
+
 .tokyo_tm_news ul li .list_inner:hover .main {
   transform: scale(1.1) translateZ(0);
 }

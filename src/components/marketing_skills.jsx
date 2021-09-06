@@ -9,6 +9,8 @@ const News = () => {
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
+  const [isOpen6, setIsOpen6] = useState(false);
 
   function toggleModalOne() {
     setIsOpen(!isOpen);
@@ -22,6 +24,12 @@ const News = () => {
   function toggleModalFour() {
     setIsOpen4(!isOpen4);
   }
+  function toggleModalFive() {
+    setIsOpen5(!isOpen5);
+  }
+  function toggleModalSix() {
+    setIsOpen6(!isOpen6);
+  }
 
   return (
     <>
@@ -29,8 +37,8 @@ const News = () => {
         <div className="tokyo_tm_title">
           <div className="title_flex">
             <div className="left">
-              <span>News</span>
-              <h3>Latest News</h3>
+              <span>List of skills</span>
+              <h3>Marketing skills</h3>
             </div>
           </div>
         </div>
@@ -53,15 +61,13 @@ const News = () => {
               {/* END IMAGE */}
               <div className="details">
                 <div className="extra">
-                  <p className="date">
-                    By <a href="#">Alex Watson</a>
-                    <span>05 April 2021</span>
-                  </p>
+                  <p className="date"></p>
                 </div>
                 {/* END EXTRA */}
 
                 <h3 className="title" onClick={toggleModalOne}>
-                  Format releases a new tool that enables direct video hosting
+                  Experience buying ads in competitive global markets, using
+                  state of the art techniques.
                 </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={toggleModalOne}>
@@ -467,6 +473,33 @@ const News = () => {
                             ordinary things in the kitchen are transformed when
                             the light is on or off.
                           </p>
+                          <div className="counter">
+                            <div className="about_title">
+                              <h3>Fun Facts</h3>
+                            </div>
+                            <ul>
+                              <li>
+                                <div className="list_inner">
+                                  <h3>777+</h3>
+                                  <span>Projects Completed</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div className="list_inner">
+                                  <h3>3K</h3>
+                                  <span>Happy Clients</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div className="list_inner">
+                                  <h3>9K+</h3>
+                                  <span>Lines of Code</span>
+                                </div>
+                              </li>
+                            </ul>
+                            {/* END COUNTER CONTENT */}
+                          </div>
+                          {/* END COUNTER */}
                           <p>
                             The trick here is to look slowly, and then look
                             again. Take the time to look in detail and to look
@@ -647,7 +680,7 @@ const News = () => {
 
           <li>
             <div className="list_inner">
-              <div className="image" onClick={toggleModalThree}>
+              <div className="image" onClick={toggleModalFive}>
                 {/* <img src="assets/img/thumbs/4-3.jpg" alt="thumb" /> */}
                 <div
                   className="main alt"
@@ -668,11 +701,11 @@ const News = () => {
                   </p>
                 </div>
 
-                <h3 className="title" onClick={toggleModalThree}>
+                <h3 className="title" onClick={toggleModalFive}>
                   Why every photographer should shoot film, even in 2021
                 </h3>
                 <div className="tokyo_tm_read_more">
-                  <a onClick={toggleModalThree}>
+                  <a onClick={toggleModalFive}>
                     <span>Read More</span>
                   </a>
                 </div>
@@ -682,14 +715,14 @@ const News = () => {
               {/* START MODAL */}
               <Modal
                 isOpen={isOpen3}
-                onRequestClose={toggleModalThree}
+                onRequestClose={toggleModalFive}
                 contentLabel="My dialog"
                 className="mymodal"
                 overlayClassName="myoverlay"
                 closeTimeoutMS={500}
               >
                 <div className="tokyo_tm_modalbox_news">
-                  <button className="close-modal" onClick={toggleModalThree}>
+                  <button className="close-modal" onClick={toggleModalFive}>
                     <img src="assets/img/svg/cancel.svg" alt="close icon" />
                   </button>
                   <div className="box_inner">
@@ -794,7 +827,7 @@ const News = () => {
 
           <li>
             <div className="list_inner">
-              <div className="image" onClick={toggleModalFour}>
+              <div className="image" onClick={toggleModalSix}>
                 {/* <img src="assets/img/thumbs/4-3.jpg" alt="thumb" /> */}
                 <div
                   className="main alt"
@@ -816,26 +849,26 @@ const News = () => {
                 </div>
                 {/* END EXTRA */}
 
-                <h3 className="title" onClick={toggleModalFour}>
+                <h3 className="title" onClick={toggleModalSix}>
                   Stay creative in lockdown with these fun photo projects
                 </h3>
                 <div className="tokyo_tm_read_more">
-                  <a onClick={toggleModalFour}>
+                  <a onClick={toggleModalSix}>
                     <span>Read More</span>
                   </a>
                 </div>
               </div>
               {/* END DETAILS */}
               <Modal
-                isOpen={isOpen4}
-                onRequestClose={toggleModalFour}
+                isOpen={isOpen6}
+                onRequestClose={toggleModalSix}
                 contentLabel="My dialog"
                 className="mymodal"
                 overlayClassName="myoverlay"
                 closeTimeoutMS={500}
               >
                 <div className="tokyo_tm_modalbox_news">
-                  <button className="close-modal" onClick={toggleModalFour}>
+                  <button className="close-modal" onClick={toggleModalSix}>
                     <img src="assets/img/svg/cancel.svg" alt="close icon" />
                   </button>
                   {/* END CLOSE ICON */}

@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Link } from "react-router-dom";
 import Home from "../../components/Home";
 import About from "../../components/About";
 import Portfolio from "../../components/Portfolio";
-import News from "../../components/News";
+import MarketingSkills from "../../components/marketing_skills";
 import Contact from "../../components/Contact";
 import AnimatedCursor from "react-animated-cursor";
 
 const HomeDark = () => {
   document.body.classList.add("dark");
+
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const changeTabHandler = (newTab) => {
+    console.log("changeTabHandler | newTab - ", newTab);
+    if (!newTab) {
+      return false;
+    }
+    if (newTab !== tabIndex) {
+      setTabIndex(newTab);
+    }
+  };
+
   return (
     <>
       <AnimatedCursor
@@ -20,7 +33,7 @@ const HomeDark = () => {
         innerScale={0.41}
         outerScale={1}
       />
-      <Tabs>
+      <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           {/* START LEFT MENU CONTENT */}
           <div className="leftpart">
@@ -48,7 +61,7 @@ const HomeDark = () => {
                       src="/assets/img/svg/avatar.svg"
                       alt="avatar"
                     />
-                    <span className="menu_content">About</span>
+                    <span className="menu_content">About me</span>
                   </Tab>
                   <Tab>
                     <img
@@ -64,7 +77,23 @@ const HomeDark = () => {
                       src="/assets/img/svg/paper.svg"
                       alt="paper"
                     />
-                    <span className="menu_content">News</span>
+                    <span className="menu_content">Marketing skills</span>
+                  </Tab>
+                  <Tab>
+                    <img
+                      className="svg"
+                      src="/assets/img/svg/paper.svg"
+                      alt="paper"
+                    />
+                    <span className="menu_content">Product skills</span>
+                  </Tab>
+                  <Tab>
+                    <img
+                      className="svg"
+                      src="/assets/img/svg/paper.svg"
+                      alt="paper"
+                    />
+                    <span className="menu_content">Full Stack Dev. skills</span>
                   </Tab>
                   <Tab>
                     <img
@@ -80,14 +109,8 @@ const HomeDark = () => {
 
               <div className="copyright">
                 <p>
-                  &copy; {new Date().getFullYear()} Tokyo <br /> Created by
-                  <a
-                    href="https://themeforest.net/user/ib-themes"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Ib-Themes
-                  </a>
+                  &copy; {new Date().getFullYear()} Created by <br />
+                  Eduard Kleiner
                 </p>
               </div>
               {/* END COPYRIGHT */}
@@ -103,7 +126,7 @@ const HomeDark = () => {
             <div className="tokyo_tm_section">
               <div className="container">
                 <TabPanel>
-                  <Home />
+                  <Home updateTab={(newTab) => changeTabHandler(newTab)} />
                 </TabPanel>
                 {/* END HOME MENU TAB CONTENT */}
 
@@ -118,7 +141,17 @@ const HomeDark = () => {
                 {/* END PORTFOLIO MENU TAB CONTENT */}
 
                 <TabPanel>
-                  <News />
+                  <MarketingSkills />
+                </TabPanel>
+                {/* END NEWS MENU TAB CONTENT */}
+
+                <TabPanel>
+                  <MarketingSkills />
+                </TabPanel>
+                {/* END NEWS MENU TAB CONTENT */}
+
+                <TabPanel>
+                  <MarketingSkills />
                 </TabPanel>
                 {/* END NEWS MENU TAB CONTENT */}
 

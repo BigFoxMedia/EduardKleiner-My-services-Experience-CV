@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import Brand from "./Brand";
+import styles from "./About.module.css"
 
 Modal.setAppElement("#root");
 
@@ -11,28 +12,52 @@ const About = () => {
     setIsOpen(!isOpen);
   }
 
+  const [age, setAge] = useState(null);
+
+  const calculate_age = (dob) => { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+  useEffect(() => {
+    setAge(calculate_age(new Date(1986, 1, 24)))
+    return () => {
+      setAge(null)
+    }
+  }, [])
+
   return (
     <>
       <div className="tokyo_tm_about">
         <div className="about_image ">
-          <img src="assets/img/slider/1.jpg" alt="about" />
+          <img src="assets/img/mad_men/Cast in Black.jfif" alt="about" />
         </div>
         {/* <div className="o-video">
           <iframe src="https://www.youtube.com/embed/0yW7w8F2TVA"></iframe>
         </div> */}
         {/* END ABOUT IMAGE */}
         <div className="description">
-          <h3 className="name">Adriano Smith &amp; Photographer</h3>
+          <h3 className="name">Let me tell you a bit about what drive me</h3>
           <div className="description_inner">
             <div className="left">
               <p>
-                Hello, I am a creative photographer based in New York and happy
-                to travel all over Europe to capture your big day in candid and
-                authentic photos. I will create a lasting memory of the people.
+                <span className={styles.quote}>“Whatever is worth doing at all, is worth doing well.”</span><br/> 
+                If I had to choose one merit that would define me the most, it would have to be my relentless ambition to achieve more than others dare to dream. 
+                As the youngest child to an immigrant family, I know what it's like to want for more, and this is the basic fuel that drives me to work harder, study harder and be better relentlessly.<br/><br/>
+
+                As a result of my passion to learn and my ambitious nature, I learnt 3, perhaps even 4 professions - depending on how you count them. 
+                I graduated from HIT, Israel with a Bachelors degree (B.Sc) in Electronics Engineering - mostly because I love technology and sciences, learning how things work and making my own gadgets. 
+                But it wasn't until I started learning more about the world of online marketing that I discovered my real passion, which is making products people love and use every day.
+                Which brought me to love and study the world of product management and coding, and I never stopped to look back.<br/> <br/> 
+                
+                If you want to read more about me, I'm happy to share with you my life's story using the link below.<br/> 
+                Otherwise, feel free to checkout my skills, open my portfolio for a sample of some of the projects I've worked on in the past, and more contact me for opportunities and gigs. 
               </p>
               <div className="tokyo_tm_button">
                 <button onClick={toggleModal} className="ib-button">
-                  Read More
+                  Read More about me
                 </button>
               </div>
               {/* END TOKYO BUTTON */}
@@ -42,29 +67,29 @@ const About = () => {
               <ul>
                 <li>
                   <p>
-                    <span>Birthday:</span>01.07.1990
+                    <span>Birthday:</span>24th, January, 1986
                   </p>
                 </li>
                 <li>
                   <p>
-                    <span>Age:</span>31
+                    <span>Age:</span>{age}
                   </p>
                 </li>
                 <li>
                   <p>
-                    <span>Address:</span>Ave 11, New York, USA
+                    <span>Address:</span>Ramat Gan, Israel
                   </p>
                 </li>
                 <li>
                   <p>
                     <span>Email:</span>
-                    <a href="mailto:mail@gmail.com">mail@gmail.com</a>
+                    <a href="mailto:ediklainer@gmail.com">ediklainer@gmail.com</a>
                   </p>
                 </li>
                 <li>
                   <p>
                     <span>Phone:</span>
-                    <a href="tel:+770221770505">+77 022 177 05 05</a>
+                    <a href="tel:+972525436090">+972 525 43 6090</a>
                   </p>
                 </li>
                 <li>
