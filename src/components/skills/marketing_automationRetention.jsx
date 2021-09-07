@@ -14,21 +14,20 @@ const modalContent = (props) => {
               <div className="extra">
                 <p className="date">Skills &#38; experience breakdown - </p>
               </div>
-              <h3 className="title">Traffic generation</h3>
+              <h3 className="title">
+                Marketing Automation &#38; User Retention
+              </h3>
               <p>
-                Top to bottom, Hands-on experience, creating creative campaigns
-                to market challenging products, often in strict regulatory
-                environments, and in very competitive global markets. Managed
-                PPC specialist teams under me in several companies, returning
-                ROI with budgets of over $100K / month.
+                Created 6 regulated, global, online Casino brands for two
+                different companies - for which I have created and executed
+                comprehensive marketing automation plans, UI/UX research and
+                research-based upgrades, as well as data driven "Gamification" 
+                features to engage and retain users in order to provide a high standard of 
+                user experience, which in turn assured high levels of retention 
+                which resulted in high average user life time values (LTVs).  
                 <br />
                 <br />
-                Used and created from scratch, sophisticated tracking solutions
-                for advanced user attributions and smart micro-targeting over
-                scalable marketing efforts. Integration of marketing generated
-                data with internal BI and other data-warehouses to deliver
-                actionable, zero-latency business decisions to improve campaign
-                management and ROI.
+                Multiple other products 
                 <br />
                 <br />
                 Experienced in both
@@ -44,7 +43,7 @@ const modalContent = (props) => {
                 <div className="listOfSkills">
                   <ul>
                     <li>
-                      <h4>PPC Marketing - </h4>
+                      <h4>Branding, Creating Brands from Scratch - </h4>
                       <p>
                         Some of the networks I bought traffic on:
                         <br />
@@ -56,7 +55,7 @@ const modalContent = (props) => {
                       </p>
                     </li>
                     <li>
-                      <h4>Display Media Buying (Direct, RTB, etc.)</h4>
+                      <h4>Writing PR Communications - </h4>
                       <p>
                         Extensive experience in reaching out to publishers to
                         close profitable
@@ -77,20 +76,67 @@ const modalContent = (props) => {
                       </p>
                     </li>
                     <li>
-                      <h4>Affiliate Management (Hunt, Deals)</h4>
+                      <h4>Creative direct postals to targeted audience - </h4>
                       <p>
-                        Arranging and attending multiple conferences &#38; booths
-                        around the world, representing brands and promoting
-                        existing and new product lines. Managing multiple
-                        affiliate mangers in my marketing teams, with the goal
-                        of retaining and increasing profitability of existing
-                        affiliates, while working tirelessly to increase the
-                        affiliate program's reach to more affiliates
-                        consistently.
+                        Arranging and attending multiple conferences &#38;
+                        booths around the world, representing brands and
+                        promoting existing and new product lines. Managing
+                        multiple affiliate mangers in my marketing teams, with
+                        the goal of retaining and increasing profitability of
+                        existing affiliates, while working tirelessly to
+                        increase the affiliate program's reach to more
+                        affiliates consistently.
                         <br />
                         <br />
                         Usage of
-                        <span className="emph"> custom made advanced A.I. + data-mining </span>
+                        <span className="emph">
+                          {" "}
+                          custom made advanced A.I. + data-mining{" "}
+                        </span>
+                        based automated hunting techniques to source and engage
+                        with potential affiliates at scale.
+                      </p>
+                    </li>
+                    <li>
+                      <h4>Targeted magazine ad placements &#38; inserts - </h4>
+                      <p>
+                        Arranging and attending multiple conferences &#38;
+                        booths around the world, representing brands and
+                        promoting existing and new product lines. Managing
+                        multiple affiliate mangers in my marketing teams, with
+                        the goal of retaining and increasing profitability of
+                        existing affiliates, while working tirelessly to
+                        increase the affiliate program's reach to more
+                        affiliates consistently.
+                        <br />
+                        <br />
+                        Usage of
+                        <span className="emph">
+                          {" "}
+                          custom made advanced A.I. + data-mining{" "}
+                        </span>
+                        based automated hunting techniques to source and engage
+                        with potential affiliates at scale.
+                      </p>
+                    </li>
+                    <li>
+                      <h4>Data-driven Market Penetration Strategy - </h4>
+                      <p>
+                        Arranging and attending multiple conferences &#38;
+                        booths around the world, representing brands and
+                        promoting existing and new product lines. Managing
+                        multiple affiliate mangers in my marketing teams, with
+                        the goal of retaining and increasing profitability of
+                        existing affiliates, while working tirelessly to
+                        increase the affiliate program's reach to more
+                        affiliates consistently.
+                        <br />
+                        <br />
+                        Usage of
+                        <span className="emph">
+                          {" "}
+                          custom made advanced A.I. + data-mining{" "}
+                        </span>
                         based automated hunting techniques to source and engage
                         with potential affiliates at scale.
                       </p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import Social from "./Social";
 import Marketing_trafficGeneration from "./skills/marketing_trafficGeneration";
+import Marketing_automationRetention from "./skills/marketing_automationRetention";
 
 Modal.setAppElement("#root");
 
@@ -59,7 +60,7 @@ const News = (props) => {
                 {/* END EXTRA */}
 
                 <h3 className="title" onClick={() => openModalId(1)}>
-                  PPC, Media buying, Affiliates 
+                  PPC, Media buying, Affiliate Programs 
                 </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(1)}>
@@ -100,7 +101,7 @@ const News = (props) => {
                     backgroundImage: "url(assets/img/dark_bg.jpg)",
                   }}
                 >
-                  <h2>Online Marketing</h2>
+                  <h2>Marketing Automation &#38; User Retention</h2>
                 </div>
               </div>
               {/* END IMAGE */}
@@ -115,7 +116,7 @@ const News = (props) => {
                 {/* END EXTRA */}
 
                 <h3 className="title" onClick={() => openModalId(2)}>
-                  .
+                  Branding, Guerilla-Marketing, PR, Postals, Magazines
                 </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(2)}>
@@ -133,7 +134,7 @@ const News = (props) => {
                 overlayClassName="myoverlay"
                 closeTimeoutMS={500}
               >
-                <Marketing_trafficGeneration
+                <Marketing_automationRetention
                   closeModal={() => closeModal()}
                   tabNavigation={(tab) => tabNavigationHandler(tab)}
                 />
@@ -168,7 +169,7 @@ const News = (props) => {
                 </div>
 
                 <h3 className="title" onClick={() => openModalId(2)}>
-                  .
+                  Details coming soon...
                 </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(3)}>
@@ -222,7 +223,7 @@ const News = (props) => {
                 {/* END EXTRA */}
 
                 <h3 className="title" onClick={() => openModalId(2)}>
-                  .
+                  Details coming soon...
                 </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(4)}>
@@ -274,7 +275,7 @@ const News = (props) => {
                 </div>
 
                 <h3 className="title" onClick={() => openModalId(2)}>
-                  .
+                  Details coming soon...
                 </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(5)}>
@@ -328,7 +329,7 @@ const News = (props) => {
                 {/* END EXTRA */}
 
                 <h3 className="title" onClick={() => openModalId(2)}>
-                  .
+                  Details coming soon...
                 </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(6)}>

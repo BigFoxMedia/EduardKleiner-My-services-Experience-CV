@@ -63,13 +63,13 @@ const HomeDark = () => {
                     />
                     <span className="menu_content">About me</span>
                   </Tab>
-                  <Tab>
+                  <Tab disabled="true">
                     <img
                       className="svg"
                       src="/assets/img/svg/briefcase.svg"
                       alt="briefcase"
                     />
-                    <span className="menu_content">Portfolio</span>
+                    <span className="menu_content">Portfolio <span className="comingSoon">(coming soon)</span></span>
                   </Tab>
                   <Tab>
                     <img
@@ -79,22 +79,23 @@ const HomeDark = () => {
                     />
                     <span className="menu_content">Marketing skills</span>
                   </Tab>
-                  <Tab>
+                  <Tab disabled="true">
                     <img
                       className="svg"
                       src="/assets/img/svg/paper.svg"
                       alt="paper"
                     />
-                    <span className="menu_content">Product skills</span>
+                    <span className="menu_content">Product skills <span className="comingSoon">(coming soon)</span></span>
                   </Tab>
-                  <Tab>
+                  <Tab disabled="true">
                     <img
                       className="svg"
                       src="/assets/img/svg/paper.svg"
                       alt="paper"
                     />
-                    <span className="menu_content">Full Stack Dev. skills</span>
+                    <span className="menu_content">Full Stack skills <span className="comingSoon">(coming soon)</span></span>
                   </Tab>
+                  
                   <Tab>
                     <img
                       className="svg"

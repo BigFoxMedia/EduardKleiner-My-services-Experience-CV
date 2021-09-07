@@ -2116,6 +2116,12 @@ body.modal {
   }
 }
 
+.comingSoon{
+  font-size: 12px;
+  font-style: italic;
+  color: #8c8c8c;
+}
+
 .modal-video-close-btn {
   cursor: pointer !important;
 }
@@ -2127,4 +2133,8 @@ body.modal {
 
 .description_wrap .listOfSkills{
   padding-left: 24px;
+}
+
+ul span.menu_content{
+  display: block;
 }
