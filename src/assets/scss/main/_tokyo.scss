@@ -2120,6 +2120,8 @@ body.modal {
   font-size: 12px;
   font-style: italic;
   color: #8c8c8c;
+  position: absolute;
+  right: -50px;
 }
 
 .modal-video-close-btn {
@@ -2137,4 +2139,5 @@ body.modal {
 
 ul span.menu_content{
   display: block;
+  position: relative;
 }
