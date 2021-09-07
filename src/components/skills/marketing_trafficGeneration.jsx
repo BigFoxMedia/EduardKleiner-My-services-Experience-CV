@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Styles from "./marketing_trafficGeneration.module.css";
 
 const modalContent = (props) => {
   return (
@@ -33,23 +32,23 @@ const modalContent = (props) => {
                 <br />
                 <br />
                 Experienced in both
-                <span className={Styles.emph}>Desktop traffic generation</span>(
+                <span className="emph">Desktop traffic generation</span>(
                 clicks, leads, purchases) and
-                <span className={Styles.emph}>mobile traffic generation</span>
+                <span className="emph">mobile traffic generation</span>
                 (clicks, installs, stickiness, retention)
               </p>
             </div>
             {/* END DETAILS */}
             <div className="main_content ">
               <div className="descriptions">
-                <div className={Styles.listOfSkills}>
+                <div className="listOfSkills">
                   <ul>
                     <li>
                       <h4>PPC Marketing - </h4>
                       <p>
                         Some of the networks I bought traffic on:
                         <br />
-                        <span className={Styles.emph}>
+                        <span className="emph">
                           Google, Facebook, Twitter, Taboola, OutBrain, Bing,
                           Reddit
                         </span>
@@ -61,17 +60,17 @@ const modalContent = (props) => {
                       <p>
                         Extensive experience in reaching out to publishers to
                         close profitable
-                        <span className={Styles.emph}>
+                        <span className="emph">
                           direct inventory placement deals
                         </span>
                         . In addition, experienced in
-                        <span className={Styles.emph}>
+                        <span className="emph">
                           rapid testing of various RTBs
                         </span>
                         to quickly find the best media sources or alternatively
                         disqualify a source as incompatible. Maintaining and
                         scaling up profitable media outlets to produce ever
-                        <span className={Styles.emph}>
+                        <span className="emph">
                           increasing ROI generating streams at scale
                         </span>
                         .
@@ -91,7 +90,7 @@ const modalContent = (props) => {
                         <br />
                         <br />
                         Usage of
-                        <span className={Styles.emph}> custom made advanced A.I. + data-mining </span>
+                        <span className="emph"> custom made advanced A.I. + data-mining </span>
                         based automated hunting techniques to source and engage
                         with potential affiliates at scale.
                       </p>
