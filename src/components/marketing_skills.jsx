@@ -114,9 +114,9 @@ const News = (props) => {
                 </div>
                 {/* END EXTRA */}
 
-                {/* <h3 className="title" onClick={() => openModalId(2)}>
-                  Sony announced two new full frame cameras with zero fanfare
-                </h3> */}
+                <h3 className="title" onClick={() => openModalId(2)}>
+                  .
+                </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(2)}>
                     <span>Read More</span>
@@ -167,9 +167,9 @@ const News = (props) => {
                   </p> */}
                 </div>
 
-                {/* <h3 className="title" onClick={() => openModalId(3)}>
-                  Why every photographer should shoot film, even in 2021
-                </h3> */}
+                <h3 className="title" onClick={() => openModalId(2)}>
+                  .
+                </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(3)}>
                     <span>Read More</span>
@@ -221,9 +221,9 @@ const News = (props) => {
                 </div>
                 {/* END EXTRA */}
 
-                {/* <h3 className="title" onClick={() => openModalId(4)}>
-                  Stay creative in lockdown with these fun photo projects
-                </h3> */}
+                <h3 className="title" onClick={() => openModalId(2)}>
+                  .
+                </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(4)}>
                     <span>Read More</span>
@@ -273,9 +273,9 @@ const News = (props) => {
                   </p> */}
                 </div>
 
-                {/* <h3 className="title" onClick={() => openModalId(5)}>
-                  Why every photographer should shoot film, even in 2021
-                </h3> */}
+                <h3 className="title" onClick={() => openModalId(2)}>
+                  .
+                </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(5)}>
                     <span>Read More</span>
@@ -327,9 +327,9 @@ const News = (props) => {
                 </div>
                 {/* END EXTRA */}
 
-                {/* <h3 className="title" onClick={() => openModalId(6)}>
-                  Stay creative in lockdown with these fun photo projects
-                </h3> */}
+                <h3 className="title" onClick={() => openModalId(2)}>
+                  .
+                </h3>
                 <div className="tokyo_tm_read_more">
                   <a onClick={() => openModalId(6)}>
                     <span>Read More</span>

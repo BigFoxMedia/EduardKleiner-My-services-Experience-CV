@@ -19,10 +19,40 @@ const Home = (props) => {
           <div className="details">
             <h3 className="name">Eduard Kleiner</h3>
             <p className="job">
-              Passionate and creative <span className="linker" onClick={() => props.updateTab(3)}>online marketer</span>, <span className="linker" onClick={() => props.updateTab(4)}>Product manager</span> and <span className="linker" onClick={() => props.updateTab(5)}>Full-Stack developer.</span><br/><br/>
-              I enjoy taking products from a bare-bones concept stage, planning and creating MVP's to test the idea, through full scale product launch and finally mass-market scale!<br/><br/>
-              A Jack-Of-All trades, and a master of All - reach out!<br/>
-              <span className="linker" onClick={() => props.updateTab(6)}>Contact me</span> for freelance gigs, cooperation and business opportunities alike.
+              I am a passionate and creative about all things product related.
+              My skills include{" "}
+              <span className="linker" onClick={() => props.updateTab(3)}>
+                Online marketing
+              </span>
+              ,{" "}
+              <span className="linker" onClick={() => props.updateTab(4)}>
+                Product management
+              </span>{" "}
+              and{" "}
+              <span className="linker" onClick={() => props.updateTab(5)}>
+                Full-Stack development
+              </span>
+              .
+              <br />
+              <br />I enjoy taking products from a bare-bones concept stage,
+              planning and creating MVP's to test the idea, through full scale
+              product launch and finally mass-market scale! Learn more{" "}
+              <span className="linker" onClick={() => props.updateTab(1)}>
+                about me
+              </span>
+              .
+              <br />
+              <br />
+              checkout my{" "}
+              <span className="linker" onClick={() => props.updateTab(2)}>
+                Portfolio
+              </span>{" "}
+              for examples of my work. <br />
+              <br />
+              <span className="linker" onClick={() => props.updateTab(6)}>
+                Contact me
+              </span>{" "}
+              for freelance gigs, cooperation and business opportunities alike.
             </p>
             {/* END JOB */}
             <Social />
