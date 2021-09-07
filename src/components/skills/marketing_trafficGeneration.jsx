@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Social from "./../Social";
+import Styles from "./marketing_trafficGeneration.module.css";
 
 const modalContent = (props) => {
   return (
@@ -13,21 +13,92 @@ const modalContent = (props) => {
           <div className="description_wrap scrollable">
             <div className="details">
               <div className="extra">
-                <p className="date">Learn more about</p>
+                <p className="date">Skills &#38; experience breakdown - </p>
               </div>
-              <h3 className="title">My marketing skills &#38; experience</h3>
+              <h3 className="title">Traffic generation</h3>
+              <p>
+                Top to bottom, Hands-on experience, creating creative campaigns
+                to market challenging products, often in strict regulatory
+                environments, and in very competitive global markets. Managed
+                PPC specialist teams under me in several companies, returning
+                ROI with budgets of over $100K / month.
+                <br />
+                <br />
+                Used and created from scratch, sophisticated tracking solutions
+                for advanced user attributions and smart micro-targeting over
+                scalable marketing efforts. Integration of marketing generated
+                data with internal BI and other data-warehouses to deliver
+                actionable, zero-latency business decisions to improve campaign
+                management and ROI.
+                <br />
+                <br />
+                Experienced in both
+                <span className={Styles.emph}>Desktop traffic generation</span>(
+                clicks, leads, purchases) and
+                <span className={Styles.emph}>mobile traffic generation</span>
+                (clicks, installs, stickiness, retention)
+              </p>
             </div>
             {/* END DETAILS */}
             <div className="main_content ">
               <div className="descriptions">
-                <p className="bigger">
-                  Just because we can't get out and about like we normally
-                  would, doesn’t mean we have to stop taking pictures. There’s
-                  still plenty you can do, provided you're prepared to use some
-                  imagination. Here are a few ideas to keep you shooting until
-                  normal life resumes.
-                </p>
-                <div className="quotebox">
+                <div className={Styles.listOfSkills}>
+                  <ul>
+                    <li>
+                      <h4>PPC Marketing - </h4>
+                      <p>
+                        Some of the networks I bought traffic on:
+                        <br />
+                        <span className={Styles.emph}>
+                          Google, Facebook, Twitter, Taboola, OutBrain, Bing,
+                          Reddit
+                        </span>
+                        , and many more...
+                      </p>
+                    </li>
+                    <li>
+                      <h4>Display Media Buying (Direct, RTB, etc.)</h4>
+                      <p>
+                        Extensive experience in reaching out to publishers to
+                        close profitable
+                        <span className={Styles.emph}>
+                          direct inventory placement deals
+                        </span>
+                        . In addition, experienced in
+                        <span className={Styles.emph}>
+                          rapid testing of various RTBs
+                        </span>
+                        to quickly find the best media sources or alternatively
+                        disqualify a source as incompatible. Maintaining and
+                        scaling up profitable media outlets to produce ever
+                        <span className={Styles.emph}>
+                          increasing ROI generating streams at scale
+                        </span>
+                        .
+                      </p>
+                    </li>
+                    <li>
+                      <h4>Affiliate Management (Hunt, Deals)</h4>
+                      <p>
+                        Arranging and attending multiple conferences & booths
+                        around the world, representing brands and promoting
+                        existing and new product lines. Managing multiple
+                        affiliate mangers in my marketing teams, with the goal
+                        of retaining and increasing profitability of existing
+                        affiliates, while working tirelessly to increase the
+                        affiliate program's reach to more affiliates
+                        consistently.
+                        <br />
+                        <br />
+                        Usage of
+                        <span className={Styles.emph}> custom made advanced A.I. + data-mining </span>
+                        based automated hunting techniques to source and engage
+                        with potential affiliates at scale.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                {/* <div className="quotebox">
                   <div className="icon">
                     <img
                       className="svg"
@@ -42,21 +113,19 @@ const modalContent = (props) => {
                     shooting away from home consistently inspires us to new
                     artistic heights.
                   </p>
-                </div>
+                </div> */}
                 {/* END QUOTEBOX */}
-                <p>
-                  Pretend everything is new and that you haven’t seen it before,
-                  and then you will be free to notice the leading lines, the
-                  places where one edge meets another in delightful geometric
-                  harmony, and how the ordinary things in the kitchen are
-                  transformed when the light is on or off.
-                </p>
               </div>
               {/* END DESCRIPTION */}
 
               <div class="target"></div>
               <div className="news_share">
-                <span style={{textDecoration: 'underline'}} onClick={() => props.tabNavigation(6)}>Reach out for collaborations</span>
+                <span
+                  style={{ textDecoration: "underline" }}
+                  onClick={() => props.tabNavigation(6)}
+                >
+                  Reach out for collaborations
+                </span>
                 {/* END SOCIAL SHARE */}
               </div>
               {/* END NEWS SHARE */}

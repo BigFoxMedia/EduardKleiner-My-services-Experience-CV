@@ -146,12 +146,12 @@ const HomeDark = () => {
                 {/* END NEWS MENU TAB CONTENT */}
 
                 <TabPanel>
-                  <MarketingSkills />
+                  <MarketingSkills tabNavigation={(newTab) => changeTabHandler(newTab)}/>
                 </TabPanel>
                 {/* END NEWS MENU TAB CONTENT */}
 
                 <TabPanel>
-                  <MarketingSkills />
+                  <MarketingSkills tabNavigation={(newTab) => changeTabHandler(newTab)}/>
                 </TabPanel>
                 {/* END NEWS MENU TAB CONTENT */}
 
