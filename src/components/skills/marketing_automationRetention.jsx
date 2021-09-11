@@ -18,23 +18,16 @@ const modalContent = (props) => {
                 Marketing Automation &#38; User Retention
               </h3>
               <p>
-                Created 6 regulated, global, online Casino brands for two
-                different companies - for which I have created and executed
-                comprehensive marketing automation plans, UI/UX research and
-                research-based upgrades, as well as data driven "Gamification" 
-                features to engage and retain users in order to provide a high standard of 
-                user experience, which in turn assured high levels of retention 
-                which resulted in high average user life time values (LTVs).  
-                <br />
-                <br />
-                Multiple other products 
-                <br />
-                <br />
-                Experienced in both
-                <span className="emph">Desktop traffic generation</span>(
-                clicks, leads, purchases) and
-                <span className="emph">mobile traffic generation</span>
-                (clicks, installs, stickiness, retention)
+                To generate brand loyalty and increase customer retention at
+                scale takes a lot of time and effort. Actually, that's only
+                partially true. The key to scale any businesses marketing
+                efforts horizontally (impact as many customers) and vertically
+                (generate a deep impact on each and every customer), with the
+                least amount of effort takes sophistication and adoption of the
+                best technologies available at our disposal, to automate and
+                scale up smart, pin-point data-driven marketing activities to
+                match as many small audience groups while maximizing the
+                relevance of the message.
               </p>
             </div>
             {/* END DETAILS */}
@@ -43,15 +36,22 @@ const modalContent = (props) => {
                 <div className="listOfSkills">
                   <ul>
                     <li>
-                      <h4>Branding, Creating Brands from Scratch - </h4>
+                      <h4>Branding - </h4>
                       <p>
-                        Some of the networks I bought traffic on:
-                        <br />
+                        Developing a{" "}
+                        <span className="emph">brand identity and image</span>{" "}
+                        for the casino industry, creating multiple brands from
+                        scratch. Determining brand{" "}
+                        <span className="emph">tone of voice</span>, generating
+                        brand recognition brand engagement in order to foster{" "}
+                        <span className="emph">brand loyalty</span> through
                         <span className="emph">
-                          Google, Facebook, Twitter, Taboola, OutBrain, Bing,
-                          Reddit
-                        </span>
-                        , and many more...
+                          {" "}
+                          online and offline marketing
+                        </span>{" "}
+                        activities.
+                        <br />
+                        <span className="emph"></span>
                       </p>
                     </li>
                     <li>

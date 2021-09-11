@@ -6,8 +6,153 @@ import Marketing_automationRetention from "./skills/marketing_automationRetentio
 
 Modal.setAppElement("#root");
 
+const ModalContent = (props) => {
+  return (
+    <>
+      {console.log("TEST - props - ")}
+      {console.log(props)}
+
+      {props.data.modalContent !== false && (
+        <props.data.modalContent
+          closeModal={() => props.closeModal()}
+          tabNavigation={(tab) => props.tabNavigationHandler(tab)}
+        />
+      )}
+
+      {props.data.modalContent === false && (
+        <div className="tokyo_tm_modalbox_news">
+          <button className="close-modal" onClick={() => props.closeModal()}>
+            <img src="assets/img/svg/cancel.svg" alt="close icon" />
+          </button>
+          {/* END CLOSE ICON */}
+          <div className="box_inner">
+            <div className="description_wrap scrollable">
+              <div className="details">
+                <h3 className="title">Coming soon...</h3>
+              </div>
+              {/* END DETAILS */}
+            </div>
+          </div>
+          {/* END BOX INNER */}
+        </div>
+      )}
+    </>
+  );
+};
+
 const News = (props) => {
   const [modalIdOpen, setModalIdOpen] = useState(0);
+
+  const [listOfItems, setListOfItems] = useState([
+    {
+      title: "Traffic Generation",
+      subtitle: "PPC, Media buying, Affiliate Programs",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: Marketing_trafficGeneration,
+    },
+    {
+      title: "Marketing Automation & User Retention",
+      subtitle: "Branding, Guerilla-Marketing, PR, Postals, Magazines",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: Marketing_automationRetention,
+    },
+    {
+      title: "Marketing Automation & Communications",
+      subtitle: "Details coming soon...",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: false,
+    },
+    {
+      title: "Business Management",
+      subtitle: "Details coming soon...",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: false,
+    },
+    {
+      title: "temp",
+      subtitle: "Details coming soon...",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: false,
+    },
+    {
+      title: "temp",
+      subtitle: "Details coming soon...",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: false,
+    },
+    {
+      title: "temp",
+      subtitle: "Details coming soon...",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: false,
+    },
+    {
+      title: "temp",
+      subtitle: "Details coming soon...",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: false,
+    },
+  ]);
+
+  const listItems = listOfItems.map((item, index) => (
+    <li>
+      <div className="list_inner">
+        <div className="image" onClick={() => openModalId(index + 1)}>
+          {/* <img src="assets/img/dark_bg.jpg" alt="thumb" /> */}
+          <div
+            className="main alt"
+            style={{
+              backgroundImage: "url(assets/img/dark_bg.jpg)",
+            }}
+          >
+            <h2>
+              {index + 1} - {item.title}
+            </h2>
+          </div>
+        </div>
+        {/* END IMAGE */}
+        <div className="details">
+          <div className="extra">
+            <p className="date"></p>
+          </div>
+          {/* END EXTRA */}
+
+          <h3 className="title" onClick={() => openModalId(index + 1)}>
+            {item.subtitle}
+          </h3>
+          <div className="tokyo_tm_read_more">
+            <a onClick={() => openModalId(index + 1)}>
+              <span>Read More</span>
+            </a>
+          </div>
+          {/* END READ MORE BUTTON */}
+        </div>
+        {/* END DETAILS */}
+
+        {/* START MODAL */}
+        <Modal
+          isOpen={modalIdOpen === index + 1}
+          onRequestClose={() => closeModal()}
+          contentLabel="My dialog"
+          className="mymodal"
+          overlayClassName="myoverlay"
+          closeTimeoutMS={500}
+        >
+          {/* <{item.modalContent !== false ? item.modalContent : ""}
+            closeModal={() => closeModal()}
+            tabNavigation={(tab) => tabNavigationHandler(tab)}
+          /> */}
+          <ModalContent
+            data={item}
+            closeModal={() => closeModal()}
+            tabNavigation={(tab) => tabNavigationHandler(tab)}
+          />
+          {/* END MODALBOX NEWS */}
+        </Modal>
+        {/* END MODAL */}
+      </div>
+    </li>
+  ));
 
   const openModalId = (id) => {
     console.log("openModalId to ID - ", id);
@@ -38,325 +183,7 @@ const News = (props) => {
         </div>
         {/* END TITLE */}
 
-        <ul>
-          <li>
-            <div className="list_inner">
-              <div className="image" onClick={() => openModalId(1)}>
-                {/* <img src="assets/img/dark_bg.jpg" alt="thumb" /> */}
-                <div
-                  className="main alt"
-                  style={{
-                    backgroundImage: "url(assets/img/dark_bg.jpg)",
-                  }}
-                >
-                  <h2>Traffic Generation</h2>
-                </div>
-              </div>
-              {/* END IMAGE */}
-              <div className="details">
-                <div className="extra">
-                  <p className="date"></p>
-                </div>
-                {/* END EXTRA */}
-
-                <h3 className="title" onClick={() => openModalId(1)}>
-                  PPC, Media buying, Affiliate Programs 
-                </h3>
-                <div className="tokyo_tm_read_more">
-                  <a onClick={() => openModalId(1)}>
-                    <span>Read More</span>
-                  </a>
-                </div>
-                {/* END READ MORE BUTTON */}
-              </div>
-              {/* END DETAILS */}
-
-              {/* START MODAL */}
-              <Modal
-                isOpen={modalIdOpen === 1}
-                onRequestClose={() => closeModal()}
-                contentLabel="My dialog"
-                className="mymodal"
-                overlayClassName="myoverlay"
-                closeTimeoutMS={500}
-              >
-                <Marketing_trafficGeneration
-                  closeModal={() => closeModal()}
-                  tabNavigation={(tab) => tabNavigationHandler(tab)}
-                />
-                {/* END MODALBOX NEWS */}
-              </Modal>
-              {/* END MODAL */}
-            </div>
-          </li>
-          {/* END SINGLE BLOG */}
-
-          <li>
-            <div className="list_inner">
-              <div className="image" onClick={() => openModalId(2)}>
-                {/* <img src="assets/img/thumbs/4-3.jpg" alt="thumb" /> */}
-                <div
-                  className="main alt"
-                  style={{
-                    backgroundImage: "url(assets/img/dark_bg.jpg)",
-                  }}
-                >
-                  <h2>Marketing Automation &#38; User Retention</h2>
-                </div>
-              </div>
-              {/* END IMAGE */}
-
-              <div className="details">
-                <div className="extra">
-                  {/* <p className="date">
-                    By <a href="#">Brook Kennedy</a>
-                    <span>22 March 2021</span>
-                  </p> */}
-                </div>
-                {/* END EXTRA */}
-
-                <h3 className="title" onClick={() => openModalId(2)}>
-                  Branding, Guerilla-Marketing, PR, Postals, Magazines
-                </h3>
-                <div className="tokyo_tm_read_more">
-                  <a onClick={() => openModalId(2)}>
-                    <span>Read More</span>
-                  </a>
-                </div>
-                {/* END READ MORE BUTTON */}
-              </div>
-
-              <Modal
-                isOpen={modalIdOpen === 2}
-                onRequestClose={() => closeModal()}
-                contentLabel="My dialog"
-                className="mymodal"
-                overlayClassName="myoverlay"
-                closeTimeoutMS={500}
-              >
-                <Marketing_automationRetention
-                  closeModal={() => closeModal()}
-                  tabNavigation={(tab) => tabNavigationHandler(tab)}
-                />
-              </Modal>
-              {/* END MODAL */}
-            </div>
-            {/* END LIST INNER */}
-          </li>
-          {/* END SINGLE BLOG */}
-
-          <li>
-            <div className="list_inner">
-              <div className="image" onClick={() => openModalId(3)}>
-                {/* <img src="assets/img/thumbs/4-3.jpg" alt="thumb" /> */}
-                <div
-                  className="main alt"
-                  style={{
-                    backgroundImage: "url(assets/img/dark_bg.jpg)",
-                  }}
-                >
-                  <h2>Marketing Automation &#38; Communications</h2>
-                </div>
-              </div>
-              {/* END IMAGE */}
-
-              <div className="details">
-                <div className="extra">
-                  {/* <p className="date">
-                    By <a href="#">Paola Atkins</a>
-                    <span>15 Feb 2021</span>
-                  </p> */}
-                </div>
-
-                <h3 className="title" onClick={() => openModalId(2)}>
-                  Details coming soon...
-                </h3>
-                <div className="tokyo_tm_read_more">
-                  <a onClick={() => openModalId(3)}>
-                    <span>Read More</span>
-                  </a>
-                </div>
-              </div>
-              {/* END DETAILS */}
-
-              {/* START MODAL */}
-              <Modal
-                isOpen={modalIdOpen === 3}
-                onRequestClose={() => closeModal()}
-                contentLabel="My dialog"
-                className="mymodal"
-                overlayClassName="myoverlay"
-                closeTimeoutMS={500}
-              >
-                <Marketing_trafficGeneration
-                  closeModal={() => closeModal()}
-                  tabNavigation={(tab) => tabNavigationHandler(tab)}
-                />
-              </Modal>
-            </div>
-            {/* END LIST INNER */}
-          </li>
-          {/* END SINGLE BLOG */}
-
-          <li>
-            <div className="list_inner">
-              <div className="image" onClick={() => openModalId(4)}>
-                {/* <img src="assets/img/thumbs/4-3.jpg" alt="thumb" /> */}
-                <div
-                  className="main alt"
-                  style={{
-                    backgroundImage: "url(assets/img/dark_bg.jpg)",
-                  }}
-                >
-                  <h2>Business Management</h2>
-                </div>
-              </div>
-              {/* END IMAGE */}
-
-              <div className="details">
-                <div className="extra">
-                  {/* <p className="date">
-                    By <a href="#">Kevin Stone</a>
-                    <span>22 Jan 2021</span>
-                  </p> */}
-                </div>
-                {/* END EXTRA */}
-
-                <h3 className="title" onClick={() => openModalId(2)}>
-                  Details coming soon...
-                </h3>
-                <div className="tokyo_tm_read_more">
-                  <a onClick={() => openModalId(4)}>
-                    <span>Read More</span>
-                  </a>
-                </div>
-              </div>
-              {/* END DETAILS */}
-              <Modal
-                isOpen={modalIdOpen === 4}
-                onRequestClose={() => closeModal()}
-                contentLabel="My dialog"
-                className="mymodal"
-                overlayClassName="myoverlay"
-                closeTimeoutMS={500}
-              >
-                <Marketing_trafficGeneration
-                  closeModal={() => closeModal()}
-                  tabNavigation={(tab) => tabNavigationHandler(tab)}
-                />
-              </Modal>
-              {/* END MODAL */}
-            </div>
-            {/* END LIST INNER */}
-          </li>
-          {/* END SINGLE BLOG */}
-
-          <li>
-            <div className="list_inner">
-              <div className="image" onClick={() => openModalId(5)}>
-                {/* <img src="assets/img/thumbs/4-3.jpg" alt="thumb" /> */}
-                <div
-                  className="main alt"
-                  style={{
-                    backgroundImage: "url(assets/img/dark_bg.jpg)",
-                  }}
-                >
-                  <h2>Marketing Automation &#38; Communications</h2>
-                </div>
-              </div>
-              {/* END IMAGE */}
-
-              <div className="details">
-                <div className="extra">
-                  {/* <p className="date">
-                    By <a href="#">Paola Atkins</a>
-                    <span>15 Feb 2021</span>
-                  </p> */}
-                </div>
-
-                <h3 className="title" onClick={() => openModalId(2)}>
-                  Details coming soon...
-                </h3>
-                <div className="tokyo_tm_read_more">
-                  <a onClick={() => openModalId(5)}>
-                    <span>Read More</span>
-                  </a>
-                </div>
-              </div>
-              {/* END DETAILS */}
-
-              {/* START MODAL */}
-              <Modal
-                isOpen={modalIdOpen === 5}
-                onRequestClose={() => closeModal()}
-                contentLabel="My dialog"
-                className="mymodal"
-                overlayClassName="myoverlay"
-                closeTimeoutMS={500}
-              >
-                <Marketing_trafficGeneration
-                  closeModal={() => closeModal()}
-                  tabNavigation={(tab) => tabNavigationHandler(tab)}
-                />
-              </Modal>
-            </div>
-            {/* END LIST INNER */}
-          </li>
-          {/* END SINGLE BLOG */}
-
-          <li>
-            <div className="list_inner">
-              <div className="image" onClick={() => openModalId(6)}>
-                {/* <img src="assets/img/thumbs/4-3.jpg" alt="thumb" /> */}
-                <div
-                  className="main alt"
-                  style={{
-                    backgroundImage: "url(assets/img/dark_bg.jpg)",
-                  }}
-                >
-                  <h2>Business Management</h2>
-                </div>
-              </div>
-              {/* END IMAGE */}
-
-              <div className="details">
-                <div className="extra">
-                  {/* <p className="date">
-                    By <a href="#">Kevin Stone</a>
-                    <span>22 Jan 2021</span>
-                  </p> */}
-                </div>
-                {/* END EXTRA */}
-
-                <h3 className="title" onClick={() => openModalId(2)}>
-                  Details coming soon...
-                </h3>
-                <div className="tokyo_tm_read_more">
-                  <a onClick={() => openModalId(6)}>
-                    <span>Read More</span>
-                  </a>
-                </div>
-              </div>
-              {/* END DETAILS */}
-              <Modal
-                isOpen={modalIdOpen === 6}
-                onRequestClose={() => closeModal()}
-                contentLabel="My dialog"
-                className="mymodal"
-                overlayClassName="myoverlay"
-                closeTimeoutMS={500}
-              >
-                <Marketing_trafficGeneration
-                  closeModal={() => closeModal()}
-                  tabNavigation={(tab) => tabNavigationHandler(tab)}
-                />
-              </Modal>
-              {/* END MODAL */}
-            </div>
-            {/* END LIST INNER */}
-          </li>
-          {/* END SINGLE BLOG */}
-        </ul>
+        <ul>{listItems}</ul>
       </div>
     </>
   );
