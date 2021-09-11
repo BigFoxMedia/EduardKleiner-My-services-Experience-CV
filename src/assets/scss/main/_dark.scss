@@ -88,6 +88,23 @@ body.dark .linker {
   cursor: pointer;
 }
 
+body.dark .callToAction_main {
+  font-weight: 600;
+  cursor: pointer !important;
+  padding: 8px 20px;
+  font-size: 18px;
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid #bbb;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+body.dark .callToAction_main:hover{
+  filter: invert(0.8);
+  transform: translateY(-5px);
+}
+
 body.dark .tokyo_tm_all_wrap .leftpart {
   background-color: #000;
 }
