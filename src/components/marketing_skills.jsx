@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import Social from "./Social";
 import Marketing_trafficGeneration from "./skills/marketing_trafficGeneration";
+import Marketing_OnlineAndOfflineMarketing from "./skills/marketing_OnlineAndOfflineMarketing";
 import Marketing_automationRetention from "./skills/marketing_automationRetention";
+import Marketing_BusinessManagement from "./skills/marketing_BusinessManagement";
+import Marketing_TechnicalOnlineMarketing from "./skills/marketing_TechnicalOnlineMarketing";
 
 Modal.setAppElement("#root");
 
@@ -51,47 +54,35 @@ const News = (props) => {
       modalContent: Marketing_trafficGeneration,
     },
     {
-      title: "Marketing Automation & User Retention",
+      title: "Online & Offline Marketing",
       subtitle: "Branding, Guerilla-Marketing, PR, Postals, Magazines",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: Marketing_OnlineAndOfflineMarketing,
+    },
+    {
+      title: "Marketing Automation & User Retention",
+      subtitle: "Copywriting, User life cycles, Funnel Communications",
       background: "url(assets/img/dark_bg.jpg)",
       modalContent: Marketing_automationRetention,
     },
     {
-      title: "Marketing Automation & Communications",
-      subtitle: "Details coming soon...",
-      background: "url(assets/img/dark_bg.jpg)",
-      modalContent: false,
-    },
-    {
       title: "Business Management",
-      subtitle: "Details coming soon...",
+      subtitle: "Project & Budget Management, B2B Negotiations, Rapid POC's",
       background: "url(assets/img/dark_bg.jpg)",
-      modalContent: false,
+      modalContent: Marketing_BusinessManagement,
     },
     {
-      title: "temp",
-      subtitle: "Details coming soon...",
+      title: "Technical Online Marketing",
+      subtitle: "Twilio, MailChimp, Live-Chat, SendGrid, Autopilot & more...",
       background: "url(assets/img/dark_bg.jpg)",
-      modalContent: false,
+      modalContent: Marketing_TechnicalOnlineMarketing,
     },
     {
-      title: "temp",
-      subtitle: "Details coming soon...",
+      title: "Tools of the trade",
+      subtitle: "Mastery of Excel, Photoshop, After effects, Premiere & more...",
       background: "url(assets/img/dark_bg.jpg)",
       modalContent: false,
-    },
-    {
-      title: "temp",
-      subtitle: "Details coming soon...",
-      background: "url(assets/img/dark_bg.jpg)",
-      modalContent: false,
-    },
-    {
-      title: "temp",
-      subtitle: "Details coming soon...",
-      background: "url(assets/img/dark_bg.jpg)",
-      modalContent: false,
-    },
+    }
   ]);
 
   const listItems = listOfItems.map((item, index) => (
@@ -106,7 +97,7 @@ const News = (props) => {
             }}
           >
             <h2>
-              {index + 1} - {item.title}
+              {item.title}
             </h2>
           </div>
         </div>

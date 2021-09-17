@@ -38,9 +38,14 @@ const HomeDark = () => {
           {/* START LEFT MENU CONTENT */}
           <div className="leftpart">
             <div className="leftpart_inner">
-              <div className="logo">
+              {/* <div className="logo">
                 <Link className="navbar-brand" to="/">
                   <img src="/assets/img/logo/dark.png" alt="brand" />
+                </Link>
+              </div> */}
+              <div className="logo" onClick={() => setTabIndex(1)}>
+                <Link className="navbar-brand" to="/">
+                  <h3>EDUARD'S PORTFOLIO</h3>
                 </Link>
               </div>
               {/* END LOGO */}
@@ -110,8 +115,7 @@ const HomeDark = () => {
 
               <div className="copyright">
                 <p>
-                  &copy; {new Date().getFullYear()} Created by <br />
-                  Eduard Kleiner
+                  &copy; {new Date().getFullYear()} Eduard Kleiner
                 </p>
               </div>
               {/* END COPYRIGHT */}

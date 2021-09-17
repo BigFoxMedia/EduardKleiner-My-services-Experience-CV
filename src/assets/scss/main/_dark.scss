@@ -91,7 +91,7 @@ body.dark .linker {
 body.dark .callToAction_main {
   font-weight: 600;
   cursor: pointer !important;
-  padding: 8px 20px;
+  padding: 8px 20px; 
   font-size: 18px;
   background-color: transparent;
   box-shadow: none;
@@ -352,3 +352,12 @@ body.dark {
     }
   }
 }
+
+.navbar-brand {
+  text-decoration: unset;
+  font-weight: 600;
+  h2 {
+    font-weight: 600;
+  }
+}
+
