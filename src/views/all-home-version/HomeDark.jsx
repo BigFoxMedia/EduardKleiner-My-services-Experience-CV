@@ -5,8 +5,10 @@ import Home from "../../components/Home";
 import About from "../../components/About";
 import Portfolio from "../../components/Portfolio";
 import MarketingSkills from "../../components/marketing_skills";
+import ProductSkills from "../../components/fullStack_skills";
 import Contact from "../../components/Contact";
 import AnimatedCursor from "react-animated-cursor";
+/*import Swiss_Army_Knife from "./../../assets/Swiss_Army_Knife.svg";*/
 
 const HomeDark = () => {
   document.body.classList.add("dark");
@@ -38,16 +40,12 @@ const HomeDark = () => {
           {/* START LEFT MENU CONTENT */}
           <div className="leftpart">
             <div className="leftpart_inner">
-              {/* <div className="logo">
+              <div className="logo" onClick={() => setTabIndex(0)}>
                 <Link className="navbar-brand" to="/">
-                  <img src="/assets/img/logo/dark.png" alt="brand" />
-                </Link>
-              </div> */}
-              <div className="logo" onClick={() => setTabIndex(1)}>
-                <Link className="navbar-brand" to="/">
-                  <h3>EDUARD'S PORTFOLIO</h3>
+                  {/* <h3>EDUARD'S PORTFOLIO</h3> */}
                 </Link>
               </div>
+
               {/* END LOGO */}
 
               <div className="menu">
@@ -74,7 +72,10 @@ const HomeDark = () => {
                       src="/assets/img/svg/briefcase.svg"
                       alt="briefcase"
                     />
-                    <span className="menu_content">Portfolio <span className="comingSoon">(coming soon)</span></span>
+                    <span className="menu_content">
+                      Portfolio{" "}
+                      <span className="comingSoon">(coming soon)</span>
+                    </span>
                   </Tab>
                   <Tab>
                     <img
@@ -84,23 +85,15 @@ const HomeDark = () => {
                     />
                     <span className="menu_content">Marketing skills</span>
                   </Tab>
-                  <Tab disabled="true">
+                  <Tab>
                     <img
                       className="svg"
                       src="/assets/img/svg/paper.svg"
                       alt="paper"
                     />
-                    <span className="menu_content">Product skills <span className="comingSoon">(coming soon)</span></span>
+                    <span className="menu_content">Full Stack skills</span>
                   </Tab>
-                  <Tab disabled="true">
-                    <img
-                      className="svg"
-                      src="/assets/img/svg/paper.svg"
-                      alt="paper"
-                    />
-                    <span className="menu_content">Full Stack skills <span className="comingSoon">(coming soon)</span></span>
-                  </Tab>
-                  
+
                   <Tab>
                     <img
                       className="svg"
@@ -114,9 +107,12 @@ const HomeDark = () => {
               {/* END MENU */}
 
               <div className="copyright">
-                <p>
-                  &copy; {new Date().getFullYear()} Eduard Kleiner
-                </p>
+                <p>&copy; {new Date().getFullYear()} Eduard Kleiner</p>
+                <div className="terms">
+                  <Link className="navbar-brand" to="/terms">
+                    Terms
+                  </Link>
+                </div>
               </div>
               {/* END COPYRIGHT */}
             </div>
@@ -146,17 +142,16 @@ const HomeDark = () => {
                 {/* END PORTFOLIO MENU TAB CONTENT */}
 
                 <TabPanel>
-                  <MarketingSkills tabNavigation={(newTab) => changeTabHandler(newTab)}/>
+                  <MarketingSkills
+                    tabNavigation={(newTab) => changeTabHandler(newTab)}
+                  />
                 </TabPanel>
                 {/* END NEWS MENU TAB CONTENT */}
 
                 <TabPanel>
-                  <MarketingSkills tabNavigation={(newTab) => changeTabHandler(newTab)}/>
-                </TabPanel>
-                {/* END NEWS MENU TAB CONTENT */}
-
-                <TabPanel>
-                  <MarketingSkills tabNavigation={(newTab) => changeTabHandler(newTab)}/>
+                  <ProductSkills
+                    tabNavigation={(newTab) => changeTabHandler(newTab)}
+                  />
                 </TabPanel>
                 {/* END NEWS MENU TAB CONTENT */}
 
@@ -165,12 +160,15 @@ const HomeDark = () => {
                 </TabPanel>
                 {/* END CONTACT MENU TAB CONTENT */}
               </div>
+              
             </div>
           </div>
         </div>
         {/* END RIGHT PART CONTENT */}
       </Tabs>
       {/* END TABS */}
+
+      
     </>
   );
 };

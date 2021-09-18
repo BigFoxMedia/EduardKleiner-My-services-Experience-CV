@@ -5,9 +5,9 @@ import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [viewport, setViewport] = useState({
-    latitude: 40.712776,
-    longitude: -74.005974,
-    zoom: 8,
+    latitude: 32.07046925349984,
+    longitude: 34.82311027018386,
+    zoom: 12,
   });
 
   function sendEmail(e) {
@@ -56,33 +56,18 @@ const Contact = () => {
         {/* MENU WRAP */}
 
         <div className="fields">
-          <form className="contact_form" onSubmit={sendEmail}>
-            <div className="first">
-              <ul>
-                <li>
-                  <input type="text" name="name" placeholder="Name" />
-                </li>
-                {/* END FIRST NAME */}
-
-                <li>
-                  <input type="email" name="user_email" placeholder="Email" />
-                </li>
-                {/* END EMAIL */}
-
-                <li>
-                  <textarea name="message" placeholder="Message"></textarea>
-                </li>
-                {/* END SUBJECT MESSAGE */}
-              </ul>
-            </div>
-            <div className="tokyo_tm_button">
-              <button type="submit" className="ib-button">
-                Send Message
-              </button>
-            </div>
-            {/* END SUBMIT BUTTON */}
-          </form>
-          {/* END FORM */}
+          <h4>
+            Email -{" "}
+            <a className="linker" href="mailto:eduardk@affilomania.com">
+              Eduardk@affilomania.com
+            </a>
+          </h4>
+          <h4 className="spacer_horizontal_a">
+            Call - {" "}
+            <a className="linker" href="tel:+972525436090">
+              +972 - 525 - 436090
+            </a>
+          </h4>
         </div>
         {/* END FIELDS */}
       </div>

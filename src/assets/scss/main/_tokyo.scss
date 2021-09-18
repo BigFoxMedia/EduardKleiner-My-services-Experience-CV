@@ -261,7 +261,7 @@ h6 {
   display: flex;
   align-items: center;
   z-index: 10;
-  padding: 0px 100px;
+  padding: 0px 50px;
   background-color: #fff;
 }
 .tokyo_tm_all_wrap .leftpart_inner {
@@ -269,10 +269,12 @@ h6 {
   height: auto;
 }
 .tokyo_tm_all_wrap .leftpart img {
-  max-width: 150px;
+  max-width: 80%;
+  margin: auto;
+  display: block;
 }
 .tokyo_tm_all_wrap .leftpart .menu {
-  padding: 40px 0px 50px 0px;
+  padding: 20px 0px 20px 0px;
   width: 100%;
   float: left;
 }
@@ -1252,12 +1254,12 @@ ul.react-tabs__tab-list {
     height: 500px;
   }
   @media only screen and (min-width: 350px) and (max-width: 575px) {
-    width: 350px;
-    height: 500px;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 100px);
   }
   @media only screen and (min-width: 0px) and (max-width: 349px) {
-    width: 300px;
-    height: 500px;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 100px);
   }
 }
 .tokyo_tm_modalbox_news.opened {
@@ -2122,7 +2124,7 @@ body.modal {
   font-style: italic;
   color: #8c8c8c;
   position: absolute;
-  right: -50px;
+  right: 0px;
 }
 
 .modal-video-close-btn {

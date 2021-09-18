@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import Social from "./Social";
-import Marketing_trafficGeneration from "./marketing_skills/marketing_trafficGeneration";
-import Marketing_OnlineAndOfflineMarketing from "./marketing_skills/OnlineAndOfflineMarketing";
-import Marketing_automationRetention from "./marketing_skills/automationRetention";
-import Marketing_BusinessManagement from "./marketing_skills/BusinessManagement";
-import Marketing_TechnicalOnlineMarketing from "./marketing_skills/marketing_TechnicalOnlineMarketing";
+import FrontEndDeveloper from "./developer_skills/frontEndDeveloper";
+import BackEndDeveloper from "./developer_skills/backEndDeveloper";
 
 Modal.setAppElement("#root");
 
@@ -48,41 +45,35 @@ const News = (props) => {
 
   const [listOfItems, setListOfItems] = useState([
     {
-      title: "Traffic Generation",
-      subtitle: "PPC, Media buying, Affiliate Programs",
+      title: "Front End Development (Client-side)",
+      subtitle: "React, React native (hooks & classes), Vue.js, Redux, Angular, ...",
       background: "url(assets/img/dark_bg.jpg)",
-      modalContent: Marketing_trafficGeneration,
+      modalContent: FrontEndDeveloper,
     },
     {
-      title: "Online & Offline Marketing",
-      subtitle: "Branding, Guerilla-Marketing, PR, Postals, Magazines",
+      title: "Back End Development (Server-side)",
+      subtitle: "NodeJS, PHP, NoSQL, MongoDB, SQL, GraphQL, Elastic Search, ...",
       background: "url(assets/img/dark_bg.jpg)",
-      modalContent: Marketing_OnlineAndOfflineMarketing,
+      modalContent: BackEndDeveloper,
     },
     {
-      title: "Marketing Automation & User Retention",
-      subtitle: "Copywriting, User life cycles, Funnel Communications",
+      title: "DevOps (Cloud & Server)",
+      subtitle: "AWS, GCS, Azure, Firebase, WHM (Cpanel), Nginx, Apache, ... ",
       background: "url(assets/img/dark_bg.jpg)",
-      modalContent: Marketing_automationRetention,
-    },
-    {
-      title: "Business Management",
-      subtitle: "Project & Budget Management, B2B Negotiations, Rapid POC's",
-      background: "url(assets/img/dark_bg.jpg)",
-      modalContent: Marketing_BusinessManagement,
-    },
-    {
-      title: "Technical Online Marketing",
-      subtitle: "Twilio, MailChimp, Live-Chat, SendGrid, Autopilot & more...",
-      background: "url(assets/img/dark_bg.jpg)",
-      modalContent: Marketing_TechnicalOnlineMarketing,
+      modalContent: "",
     },
     {
       title: "Tools of the trade",
-      subtitle: "Mastery of Excel, Photoshop, After effects, Premiere & more...",
+      subtitle: "GIT hooks, Agile, JIRA, Node.js, Bash, ...",
       background: "url(assets/img/dark_bg.jpg)",
-      modalContent: false,
-    }
+      modalContent: "",
+    },
+    {
+      title: "WordPress & other CMS development",
+      subtitle: "Theme & Plugin Development, WPMS (Multi-site), WPML, ACF, CPT, ...",
+      background: "url(assets/img/dark_bg.jpg)",
+      modalContent: "",
+    },
   ]);
 
   const listItems = listOfItems.map((item, index) => (
@@ -168,7 +159,7 @@ const News = (props) => {
           <div className="title_flex">
             <div className="left">
               <span>#TopSkills</span>
-              <h3>Marketing skills &#38; experience</h3>
+              <h3>Full Stack Development Skills</h3>
             </div>
           </div>
         </div>

@@ -1,15 +1,15 @@
 import React from "react";
 import Social from "./Social";
+import Swiss_Army_Knife from "./../components/Swiss_Army_Knife";
 
 const Home = (props) => {
-
   const Styles = {
     leftCta: {
       marginRight: "25px",
       position: "relative",
       display: "inline-block",
-    }
-  }
+    },
+  };
 
   return (
     <>
@@ -22,6 +22,7 @@ const Home = (props) => {
                 backgroundImage: "url(assets/img/slider/profile.jfif)",
               }}
             ></div>
+            {/* <Swiss_Army_Knife /> */}
             {/* END AVATAR IMAGE */}
           </div>
           {/* END AVATAR */}
@@ -65,11 +66,28 @@ const Home = (props) => {
             </p>
             {/* END JOB */}
             <Social />
-            <a href="./Eduard Kleiner - FullStack.docx" download="Eduard Kleiner FullStack CV" style={Styles.leftCta}>
-              <button className="callToAction_main" style={{marginTop:"25px"}}>FULL-STACK CV</button>
+            <a
+              href="./Eduard Kleiner - FullStack.docx"
+              download="Eduard Kleiner FullStack CV"
+              style={Styles.leftCta}
+            >
+              <button
+                className="callToAction_main"
+                style={{ marginTop: "25px" }}
+              >
+                FULL-STACK CV
+              </button>
             </a>
-            <a href="./Eduard Kleiner - Marketing.docx" download="Eduard Kleiner Marketing CV">
-              <button className="callToAction_main" style={{marginTop:"25px"}}>MARKETING CV</button>
+            <a
+              href="./Eduard Kleiner - Marketing.docx"
+              download="Eduard Kleiner Marketing CV"
+            >
+              <button
+                className="callToAction_main"
+                style={{ marginTop: "25px" }}
+              >
+                MARKETING CV
+              </button>
             </a>
           </div>
           {/* END DETAILS */}

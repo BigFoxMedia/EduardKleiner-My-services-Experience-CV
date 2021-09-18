@@ -83,7 +83,7 @@ body.dark h6 {
 }
 
 body.dark .linker {
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -91,7 +91,7 @@ body.dark .linker {
 body.dark .callToAction_main {
   font-weight: 600;
   cursor: pointer !important;
-  padding: 8px 20px; 
+  padding: 8px 20px;
   font-size: 18px;
   background-color: transparent;
   box-shadow: none;
@@ -100,7 +100,7 @@ body.dark .callToAction_main {
   transition: 0.3s ease-in-out;
 }
 
-body.dark .callToAction_main:hover{
+body.dark .callToAction_main:hover {
   filter: invert(0.8);
   transform: translateY(-5px);
 }
@@ -142,7 +142,7 @@ body.dark .tokyo_tm_home .social li a {
   }
 }
 body.dark .tokyo_tm_all_wrap .leftpart img {
-  filter: invert(1);
+  filter: invert(0);
 }
 body.dark .tokyo_tm_home .avatar .image {
   background-image: url(../../profile.jfif) !important;
@@ -361,3 +361,65 @@ body.dark {
   }
 }
 
+a.linker {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #bbb;
+}
+
+.spacer_horizontal_a {
+  margin-top: 10px;
+}
+
+.textEmbose {
+  color: rgba(0, 0, 0, 0.6);
+  background: #6e6e6e;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+}
+
+.SwissArmyKnife img {
+  width: 100%;
+  position: absolute;
+}
+
+.SwissArmyKnife{
+  position: absolute;
+  width: 270px;
+  left: 20px;
+  bottom: 20px;
+}
+
+.SwissArmyKnife.closed .beerOpenner {
+  transform-origin: bottom left;
+  transform: rotate(86deg) translateX(-72px);
+  transition: 150ms ease-in-out;
+}
+
+.SwissArmyKnife.closed .shortKnife {
+  transform-origin: bottom left;
+  transform: rotate(30deg) translateX(0px);
+  transition: 150ms ease-in-out;
+}
+
+.SwissArmyKnife.closed .longKnife {
+  transform-origin: bottom right;
+  transform: rotate(-45deg) translateX(19px);
+  transition: 150ms ease-in-out;
+}
+
+.SwissArmyKnife.closed .canOpenner {
+  transform-origin: bottom right;
+  transform: rotate(-66deg) translateX(19px);
+  transition: 150ms ease-in-out;
+}
+
+.SwissArmyKnife.closed .unicorn{
+  width: 25px;
+  position: absolute;
+  top: 0;
+  bottom: unset;
+  display: block;
+  transform: translate(100%, 366%);
+  z-index: 100;
+}
