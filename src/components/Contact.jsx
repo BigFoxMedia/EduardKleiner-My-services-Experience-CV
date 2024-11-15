@@ -1,16 +1,17 @@
-import React from "react";
-import { useState } from "react";
-import ReactMapGL from "react-map-gl";
+// src/components/Contact.jsx
+import React, { useState } from "react";
+import { Map } from "react-map-gl";
 import emailjs from "emailjs-com";
+import "mapbox-gl/dist/mapbox-gl.css"; // Ensure this path is correct
 
 const Contact = () => {
-  const [viewport, setViewport] = useState({
+  const [viewState, setViewState] = useState({
     latitude: 32.07046925349984,
     longitude: 34.82311027018386,
     zoom: 12,
   });
 
-  function sendEmail(e) {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
@@ -28,7 +29,7 @@ const Contact = () => {
       });
 
     e.target.reset();
-  }
+  };
 
   return (
     <>
@@ -44,12 +45,13 @@ const Contact = () => {
         {/* END TITLE */}
 
         <div className="map_wrap">
-          <div className="map">
-            <ReactMapGL
-              mapStyle={"mapbox://style/mapbox/dark-v9"}
-              mapboxApiAccessToken="pk.eyJ1IjoiYmF5YXppZGgiLCJhIjoiY2tvemdwc3ByMDg1YzJubzQxcDR0cDR3dyJ9.s1zXEb5OPqgBDcmupj3GBA"
-              {...viewport}
-              onViewportChange={(nextViewport) => setViewport(nextViewport)}
+          <div className="map" style={{ height: "400px", width: "100%" }}>
+            <Map
+              {...viewState}
+              onMove={(evt) => setViewState(evt.viewState)}
+              style={{ width: "100%", height: "100%" }}
+              mapStyle="mapbox://styles/mapbox/dark-v10" // Updated style
+              mapboxAccessToken="pk.eyJ1IjoiYmF5YXppZGgiLCJhIjoiY2tvemdwc3ByMDg1YzJubzQxcDR0cDR3dyJ9.s1zXEb5OPqgBDcmupj3GBA"
             />
           </div>
         </div>
@@ -63,7 +65,7 @@ const Contact = () => {
             </a>
           </h4>
           <h4 className="spacer_horizontal_a">
-            Call - {" "}
+            Call -{" "}
             <a className="linker" href="tel:+972525436090">
               +972 - 525 - 436090
             </a>
@@ -71,7 +73,7 @@ const Contact = () => {
         </div>
         {/* END FIELDS */}
       </div>
-      {/* END COTACT */}
+      {/* END CONTACT */}
     </>
   );
 };
